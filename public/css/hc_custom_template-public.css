@@ -1,0 +1,60 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.woocommerce-form-coupon {
+  display: block !important;
+  padding: 0 !important;
+  border: none !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.woocommerce-form-coupon > p {
+  display: none !important;
+}
+
+.woocommerce-form-coupon button {
+  margin-left: 20px !important;
+}
+
+#checkout-login-container .woocommerce-form-login {
+  display: block !important;
+}
+
+#checkout-login-container .woocommerce-form-login__submit {
+  margin-bottom: 20px !important;
+}
+
+#checkout-login-container .form-row-first label,
+#checkout-login-container .form-row-last label {
+  display: none !important;
+}
+
+@media (min-width: 550px) {
+  #checkout-login-container p.form-row-first,
+  #checkout-login-container p.form-row-last {
+    float: left;
+    width: 35% !important;
+  }
+  #checkout-login-container .woocommerce-form-login__submit {
+    margin-top: 5px !important;
+    margin-left: 35px !important;
+    margin-bottom: 0px !important;
+  }
+
+  #checkout-login-container .woocommerce-form-login__rememberme {
+    display: inline !important;
+  }
+
+  #checkout-login-container .rememberme {
+    display: inline !important;
+    float: left !important;
+  }
+
+  #checkout-login-container .lost_password {
+    float: left !important;
+    margin-left: 35px !important;
+  }
+}

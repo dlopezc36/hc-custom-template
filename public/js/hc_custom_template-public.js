@@ -4,15 +4,13 @@
   var firstLoad = true;
 
   $(document).ready(function () {
-    $(".woocommerce-checkout").append("<div id='checkout-load-curtain'><div><div class='hc-custom-loader'></div><strong>Cargando...</strong></div></div>");
-
     $(document).ajaxStop(function () {
       if (firstLoad) {
         updateCheckoutAccountLogin();
         updateCheckoutCoupon();
         updateCheckoutFreeShippingBar();
 
-        $(".woocommerce-checkout #checkout-load-curtain").remove();
+        $(".woocommerce-checkout #checkout-load-curtain").hide();
 
         firstLoad = false;
       }

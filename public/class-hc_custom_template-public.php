@@ -101,9 +101,14 @@ class Hc_custom_template_Public
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/hc_custom_template-public.js', array('jquery'));
 	}
 
-	public function move_checkout_login_form()
+	public function add_loader()
 	{
-		remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10);
-		add_action('woocommerce_after_checkout_billing_form', 'woocommerce_checkout_login_form');
+		echo "<div id='checkout-load-curtain'>" .
+			"<div>" .
+			"<div class='hc-custom-loader'>" .
+			"</div>" .
+			"<strong>Cargando...</strong>" .
+			"</div>" .
+			"</div>";
 	}
 }

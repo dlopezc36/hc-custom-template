@@ -32,6 +32,92 @@
   display: none !important;
 }
 
+#checkout-login-container .wc-social-login {
+  display: block !important;
+  margin-top: 30px !important;
+  padding-top: 30px !important;
+  border-top: 2px solid #ddd !important;
+}
+
+#checkout-login-container .button-social-login {
+  border-radius: 50px !important;
+}
+
+#checkout-login-container .button-social-login.button-social-login-facebook {
+  border: 5px solid #3b5998 !important;
+}
+
+#checkout-login-container .button-social-login.button-social-login-google {
+  border: 5px solid #4285f4 !important;
+}
+
+#checkout-login-container .wc-social-login > p {
+  font-weight: bolder !important;
+}
+
+#checkout-login-container .button-social-login:hover .si {
+  background-color: hsla(0, 0%, 100%, 1) !important;
+}
+
+#checkout-login-container .wc-social-login .si-google,
+#checkout-login-container .wc-social-login .si-facebook {
+  border-radius: 40px !important;
+  border: 6px solid #fff !important;
+}
+
+#checkout-load-curtain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+}
+
+.devnet_fsl-free-shipping {
+  margin: 1rem 0 !important;
+}
+
+#checkout-load-curtain > div {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.hc-custom-loader {
+  border: 6px solid #f3f3f3 !important;
+  border-radius: 50% !important;
+  border-top: 6px solid #975868 !important;
+  width: 40px !important;
+  height: 40px !important;
+  -webkit-animation: spin 2s linear infinite !important; /* Safari */
+  animation: spin 2s linear infinite !important;
+  margin: 0 10px !important;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (min-width: 550px) {
   #checkout-login-container p.form-row-first,
   #checkout-login-container p.form-row-last {
@@ -39,7 +125,7 @@
     width: 35% !important;
   }
   #checkout-login-container .woocommerce-form-login__submit {
-    margin-top: 5px !important;
+    margin-top: 10px !important;
     margin-left: 35px !important;
     margin-bottom: 0px !important;
   }

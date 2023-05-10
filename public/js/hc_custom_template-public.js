@@ -24,7 +24,7 @@
   }
 
   function updateCheckoutCoupon() {
-    $("#order_review").before("<div id='checkout-coupon'></div>");
+    $(".cart-subtotal").after("<tr id='free-shipping-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
 
     $("#checkout-coupon").append($(".checkout_coupon"));
 

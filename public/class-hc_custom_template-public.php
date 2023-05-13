@@ -101,9 +101,20 @@ class Hc_custom_template_Public
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/hc_custom_template-public.js', array('jquery'));
 	}
 
-	public function add_loader()
+	public function add_checkout_loader()
 	{
 		echo "<div id='checkout-load-curtain'>" .
+			"<div>" .
+			"<div class='hc-custom-loader'>" .
+			"</div>" .
+			"<strong>Cargando...</strong>" .
+			"</div>" .
+			"</div>";
+	}
+
+	public function add_product_loader()
+	{
+		echo "<div id='product-load-curtain'>" .
 			"<div>" .
 			"<div class='hc-custom-loader'>" .
 			"</div>" .

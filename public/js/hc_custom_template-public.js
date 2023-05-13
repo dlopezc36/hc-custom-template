@@ -1,6 +1,8 @@
 (function ($) {
   "use strict";
 
+  // ----------------Checkout------------------
+
   var firstLoad = true;
 
   $(document).ready(function () {
@@ -29,6 +31,7 @@
     $("#checkout-coupon").append($(".checkout_coupon"));
 
     $(".woocommerce-form-coupon-toggle").remove();
+    $(".widget-title").remove();
   }
 
   function updateCheckoutAccountLogin() {
@@ -45,4 +48,18 @@
 
     $(".woocommerce-form-login-toggle").remove();
   }
+
+  // ----------------Product------------------
+
+  $(document).ready(function () {
+    $(".product-container").before("<div id='product-description-container'></div>");
+
+    $("#product-description-container").append($(".product-info .jdgm-widget"));
+    $("#product-description-container").append($(".product-info .product-title"));
+    $("#product-description-container").append($(".product-info .product-page-price"));
+
+    $(".product-info .product-short-description").before($(".product-info .variations_form"));
+
+    $(".shop-container #product-load-curtain").hide();
+  });
 })(jQuery);

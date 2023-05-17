@@ -69,6 +69,11 @@
   border: 6px solid #fff !important;
 }
 
+#checkout-login-container .button,
+#free-shipping-container-row .coupon .button {
+  font-size: 1.2em !important;
+}
+
 #checkout-load-curtain {
   display: flex;
   justify-content: center;
@@ -202,6 +207,18 @@
   -webkit-animation: spin 2s linear infinite !important; /* Safari */
   animation: spin 2s linear infinite !important;
   margin: 0 10px !important;
+}
+
+.button {
+  font-size: 0.97em !important;
+}
+
+.button.primary:not(.is-outline) {
+  font-size: 0.97em !important;
+}
+
+.is-small {
+  line-height: 1rem !important;
 }
 
 /* Safari */

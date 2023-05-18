@@ -259,6 +259,14 @@
   margin-bottom: 0 !important;
 }
 
+.cart-container .is-sticky-column.is-affixed .is-sticky-column__inner {
+  position: relative !important;
+  transform: translate(0) !important;
+  left: inherit !important;
+  top: inherit !important;
+  width: inherit !important;
+}
+
 @media (min-width: 550px) {
   .cart-container .checkout_coupon .coupon {
     align-items: center !important;
@@ -296,6 +304,10 @@
 }
 
 @media (max-width: 550px) {
+  .bnav_main_menu_container ul.bnav_main_menu {
+    overflow: hidden !important;
+  }
+
   .button {
     font-size: 0.97em !important;
   }

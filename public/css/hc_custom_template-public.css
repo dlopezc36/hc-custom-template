@@ -69,11 +69,6 @@
   border: 6px solid #fff !important;
 }
 
-#checkout-login-container .button,
-#free-shipping-container-row .coupon .button {
-  font-size: 1.2em !important;
-}
-
 #checkout-load-curtain {
   display: flex;
   justify-content: center;
@@ -99,13 +94,6 @@
   align-items: center !important;
 }
 
-.is-sticky-column {
-  background-color: #fff !important;
-  border-radius: 40px !important;
-  padding: 40px !important;
-  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.07), inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
-}
-
 @media (min-width: 550px) {
   .is-well {
     padding: 40px !important;
@@ -122,9 +110,10 @@
     width: 35% !important;
   }
   #checkout-login-container .woocommerce-form-login__submit {
-    margin-top: 10px !important;
-    margin-left: 35px !important;
+    margin-top: 0px !important;
+    margin-left: 20px !important;
     margin-bottom: 0px !important;
+    margin-right: 0px !important;
   }
 
   #checkout-login-container .woocommerce-form-login__rememberme {
@@ -139,6 +128,13 @@
   #checkout-login-container .lost_password {
     float: left !important;
     margin-left: 35px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  #checkout-login-container .button,
+  #free-shipping-container-row .coupon .button {
+    font-size: 1.2em !important;
   }
 }
 
@@ -172,6 +168,56 @@
   display: none !important;
 }
 
+.product-info .sticky-add-to-cart {
+  justify-content: start !important;
+}
+
+.product-info .quantity {
+  margin-right: 0 !important;
+}
+
+.product-info .quantity .input-text {
+  border: none !important;
+  background: #975868 !important;
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.product-info .quantity .button.minus {
+  border: none !important;
+  background: #975868 !important;
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.product-info .quantity .button.plus {
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: 1px solid white !important;
+  background: #975868 !important;
+  color: white !important;
+  text-shadow: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.product-info .quantity .minus,
+.product-info .quantity .plus {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.product-info button:not(.icon).single_add_to_cart_button,
+.product-info .button:not(.icon).single_add_to_cart_button {
+  flex-grow: 1 !important;
+  margin-right: 20px !important;
+  border: 2px solid #975868 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
 @media (max-width: 550px) {
   #product-description-container {
     padding: 0 30px !important;
@@ -196,6 +242,46 @@
   }
 }
 
+/* -----------------Cart--------------------------- */
+
+.cart-container .is-sticky-column {
+  background-color: #fff !important;
+  border-radius: 40px !important;
+  padding: 40px !important;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.07), inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.cart-container .checkout_coupon:not(.form-coupon-visible) {
+  display: none !important;
+}
+
+.cart-container .cart_totals > table:nth-child(1) {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 550px) {
+  .cart-container .checkout_coupon .coupon {
+    align-items: center !important;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0.5rem !important;
+  }
+
+  .cart-container .coupon .wp-element-button {
+    min-width: 0 !important;
+    margin: 5px !important;
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cart-container .coupon .wp-element-button {
+    width: 50% !important;
+  }
+}
+
 /* ---------------Shared--------------------------- */
 
 .hc-custom-loader {
@@ -209,16 +295,18 @@
   margin: 0 10px !important;
 }
 
-.button {
-  font-size: 0.97em !important;
-}
+@media (max-width: 550px) {
+  .button {
+    font-size: 0.97em !important;
+  }
 
-.button.primary:not(.is-outline) {
-  font-size: 0.97em !important;
-}
+  .button.primary:not(.is-outline) {
+    font-size: 0.97em !important;
+  }
 
-.is-small {
-  line-height: 1rem !important;
+  .equalize-box:not(.flickity-enabled) .is-small {
+    line-height: 1rem !important;
+  }
 }
 
 /* Safari */

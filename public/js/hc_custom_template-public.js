@@ -62,4 +62,32 @@
 
     $(".shop-container #product-load-curtain").hide();
   });
+
+  // -----------------Cart-------------------
+  $(document).ready(function () {
+
+    $(document).ajaxStop(function () {
+      updateCartCheckoutCoupon();
+      updateCheckoutLoadingBar();
+    });
+
+  });
+
+  function updateCartCheckoutCoupon() {
+
+    // $(".cart-container .cart-subtotal").before("<tr id='coupon-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
+
+    // $(".cart-container .checkout_coupon").clone().addClass("form-coupon-visible").appendTo(".cart-container #checkout-coupon");
+
+    $(".cart-container .coupon .wp-element-button").removeClass("is-form");
+
+    $(".cart-container .woocommerce-form-coupon-toggle").remove();
+    $(".cart-container .widget-title").remove();
+  }
+
+  function updateCheckoutLoadingBar() {
+    $(".cart-container .woocommerce-shipping-totals").before("<tr id='loading-bar-container-row'><td colspan='2'><div id='checkout-loading-bar'></div></td></tr>");
+
+    $("#checkout-loading-bar").append($(".cart-container .devnet_fsl-free-shipping"));
+  }
 })(jQuery);

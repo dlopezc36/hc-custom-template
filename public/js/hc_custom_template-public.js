@@ -26,9 +26,9 @@
   }
 
   function updateCheckoutCoupon() {
-    $(".cart-subtotal").after("<tr id='free-shipping-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
+    $(".checkout-sidebar .cart-subtotal").after("<tr id='free-shipping-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
 
-    $("#checkout-coupon").append($(".checkout_coupon"));
+    $(".checkout-sidebar #checkout-coupon").append($(".checkout_coupon"));
 
     $(".woocommerce-form-coupon-toggle").remove();
     $(".widget-title").remove();
@@ -67,17 +67,17 @@
   $(document).ready(function () {
 
     $(document).ajaxStop(function () {
-      updateCartCheckoutCoupon();
+      updateCartCupon();
       updateCheckoutLoadingBar();
     });
 
   });
 
-  function updateCartCheckoutCoupon() {
+  function updateCartCupon() {
 
-    // $(".cart-container .cart-subtotal").before("<tr id='coupon-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
+    $(".cart-container .cart-subtotal").after("<tr id='coupon-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
 
-    // $(".cart-container .checkout_coupon").clone().addClass("form-coupon-visible").appendTo(".cart-container #checkout-coupon");
+    $(".cart-container .checkout_coupon").clone().addClass("form-coupon-visible").appendTo(".cart-container #checkout-coupon");
 
     $(".cart-container .coupon .wp-element-button").removeClass("is-form");
 

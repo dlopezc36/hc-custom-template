@@ -285,13 +285,25 @@
 /* -----------------Store-------------------------- */
 
 .shop-page-title .is-medium {
-  display: None;
+  display: none;
+}
+
+.shop-page-title .filter-button strong {
+  display: none !important;
+}
+
+.shop-page-title .icon-equalizer:before {
+  font-size: 1.4rem !important;
 }
 
 .shop-page-title .screen-small {
   display: block !important;
-  text-align: center;
-  margin-top: 1rem;
+  text-align: center !important;
+  margin-top: 1rem !important;
+}
+
+.shop-page-title .category-filtering {
+  text-align: center !important;
 }
 
 .shop-page-title .page-title-inner {
@@ -306,10 +318,11 @@
 .shop-page-title .flex-grow {
   flex: auto !important;
   margin: 1rem !important;
+  width: 30% !important;
 }
 
 .shop-page-title .medium-text-center {
-  text-align: center !important;
+  text-align: right !important;
 }
 
 .category-page-row {

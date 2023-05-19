@@ -64,6 +64,7 @@
   });
 
   // -----------------Cart-------------------
+
   $(document).ready(function () {
 
     $(document).ajaxStop(function () {
@@ -90,4 +91,16 @@
 
     $("#checkout-loading-bar").append($(".cart-container .devnet_fsl-free-shipping"));
   }
+
+  // -----------------Store------------------
+  $(document).ready(function () {
+    updateStoreMenuOption();
+  });
+
+  function updateStoreMenuOption() {
+    $(".shop-page-title").prepend("<div id='store-menu-options'></div>");
+
+    $(".shop-page-title .is-medium").clone().addClass("screen-small").appendTo(".shop-page-title #store-menu-options")
+  }
+
 })(jQuery);

@@ -259,14 +259,6 @@
   margin-bottom: 0 !important;
 }
 
-.cart-container .is-sticky-column.is-affixed .is-sticky-column__inner {
-  position: relative !important;
-  transform: translate(0) !important;
-  left: inherit !important;
-  top: inherit !important;
-  width: inherit !important;
-}
-
 @media (min-width: 550px) {
   .cart-container .checkout_coupon .coupon {
     align-items: center !important;
@@ -284,9 +276,57 @@
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) { 
   .cart-container .coupon .wp-element-button {
     width: 50% !important;
+  }
+}
+
+/* -----------------Store-------------------------- */
+
+.shop-page-title .is-medium {
+  display: None;
+}
+
+.shop-page-title .screen-small {
+  display: block !important;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.shop-page-title .page-title-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-right: 25px !important;
+}
+
+.shop-page-title .flex-grow {
+  flex: auto !important;
+  margin: 1rem !important;
+}
+
+.shop-page-title .medium-text-center {
+  text-align: center !important;
+}
+
+.category-page-row {
+  padding-top: 10px !important;
+}
+
+@media (min-width: 850px) { 
+  .shop-page-title .is-medium:not(.screen-small) {
+    display: flex !important;
+  }
+
+  .shop-page-title .screen-small {
+    display: None !important;
+  }
+
+  .category-page-row {
+    padding-top: 30px !important;
   }
 }
 

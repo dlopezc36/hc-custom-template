@@ -66,16 +66,13 @@
   // -----------------Cart-------------------
 
   $(document).ready(function () {
-
     $(document).ajaxStop(function () {
       updateCartCupon();
       updateCheckoutLoadingBar();
     });
-
   });
 
   function updateCartCupon() {
-
     $(".cart-container .cart-subtotal").after("<tr id='coupon-container-row'><td colspan='2'><div id='checkout-coupon'></div></td></tr>");
 
     $(".cart-container .checkout_coupon").clone().addClass("form-coupon-visible").appendTo(".cart-container #checkout-coupon");
@@ -100,7 +97,8 @@
   function updateStoreMenuOption() {
     $(".shop-page-title").prepend("<div id='store-menu-options'></div>");
 
-    $(".shop-page-title .is-medium").clone().addClass("screen-small").appendTo(".shop-page-title #store-menu-options")
-  }
+    $(".shop-page-title .is-medium").clone().addClass("screen-small").appendTo(".shop-page-title #store-menu-options");
 
+    $(".shop-page-title .filter-button").html("<img class='lazy-load-active' style='width: 25px; height: 25px;' src='https://holycos.xyz/wp-content/plugins/hc_custom_template/public/imgs/filter.svg' data-src='https://holycos.xyz/wp-content/plugins/hc_custom_template/public/imgs/filter.svg'><div><strong>Filtrar</strong></div>");
+  }
 })(jQuery);

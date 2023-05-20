@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-Filtro">
+      <rect width="200" height="200"/>
+    </clipPath>
+  </defs>
+  <g id="Filtro" clip-path="url(#clip-Filtro)">
+    <rect width="200" height="200" fill="#F5F5F5"/>
+    <path id="Icon_feather-filter" data-name="Icon feather-filter" d="M10.659,3H193.841a9.159,9.159,0,0,1,6.994,15.073l-71.107,84.084v74.865a9.159,9.159,0,0,1-13.255,8.192L79.836,166.9a9.159,9.159,0,0,1-5.063-8.192V102.158L3.666,18.073A9.159,9.159,0,0,1,10.659,3ZM174.1,21.318H30.4L90.925,92.89A9.159,9.159,0,0,1,93.091,98.8v54.24l18.318,9.159V98.8a9.159,9.159,0,0,1,2.166-5.914Z" transform="translate(-3 5.409)"/>
+  </g>
+</svg>

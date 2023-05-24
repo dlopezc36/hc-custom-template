@@ -69,6 +69,7 @@
     $(document).ajaxStop(function () {
       updateCartCupon();
       updateCheckoutLoadingBar();
+      updateCardProduct();
     });
   });
 
@@ -89,7 +90,14 @@
     $("#checkout-loading-bar").append($(".cart-container .devnet_fsl-free-shipping"));
   }
 
+  function updateCardProduct() {
+    $(".category-page-row .shop-container .product").each(function() {
+      $(this).find(".price-wrapper").insertBefore($(this).find(".title-wrapper"));
+    });
+  }
+
   // -----------------Store------------------
+  
   $(document).ready(function () {
     updateStoreMenuOption();
   });

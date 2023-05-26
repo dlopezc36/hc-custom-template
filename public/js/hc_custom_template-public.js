@@ -110,7 +110,7 @@
     $(".shop-page-title .filter-button").html("<img class='lazy-load-active' style='width: 25px; height: 25px;' src='https://holycos.xyz/wp-content/plugins/hc_custom_template/public/imgs/filter.svg' data-src='https://holycos.xyz/wp-content/plugins/hc_custom_template/public/imgs/filter.svg'><div><strong>Filtrar</strong></div>");
   }
 
-  // -----------------Store------------------
+  // -----------------Shared------------------
 
   var firstLoadSearchBar = true;
 

@@ -177,7 +177,12 @@ class Hc_custom_template
 		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
 		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 		$this->loader->add_action('woocommerce_before_checkout_form', $plugin_public, 'add_checkout_loader');
-		$this->loader->add_action('woocommerce_before_single_product', $plugin_public, 'add_product_loader');
+		$this->loader->add_action('wp_ajax_add_to_mini_cart', $plugin_public, 'add_to_mini_cart');
+		$this->loader->add_action('wp_ajax_nopriv_add_to_mini_cart', $plugin_public, 'add_to_mini_cart');
+		$this->loader->add_action('wp_ajax_remove_from_mini_cart', $plugin_public,  'remove_from_mini_cart');
+		$this->loader->add_action('wp_ajax_nopriv_remove_from_mini_cart', $plugin_public, 'remove_from_mini_cart');
+		$this->loader->add_action('woocommerce_before_checkout_form', $plugin_public, 'add_checkout_loader');
+		$this->loader->add_action('wp_footer', $plugin_public, 'add_user_account');
 	}
 
 	/**

@@ -99,6 +99,7 @@ class Hc_custom_template_Public
 		 */
 
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/hc_custom_template-public.js', array('jquery'));
+		wp_localize_script($this->plugin_name, "hc_custom_template_vars", ['ajaxurl' => admin_url('admin-ajax.php')]);
 	}
 
 	public function add_checkout_loader()
@@ -121,5 +122,66 @@ class Hc_custom_template_Public
 			"<strong>Cargando...</strong>" .
 			"</div>" .
 			"</div>";
+	}
+
+	public function add_user_account()
+	{
+
+		$current_user_id = get_current_user_id();
+
+		$user_data = get_userdata($current_user_id);
+
+		if ($user_data) {
+
+			$account_name = $user_data->display_name;
+			$account_photo = get_avatar_url($user_data->user_email);
+
+			echo "<div id='user_account_data'>" .
+				"<input type='hidden' id='user_name' value='" . $account_name . "'/>" .
+				"<input type='hidden' id='user_avatar' value='" . $account_photo . "'/>" .
+				"</div>";
+
+			echo admin_url('admin-ajax.php');
+		}
+	}
+
+	function add_to_mini_cart()
+	{
+
+		$product_id = $_POST['product_id'];
+
+		WC()->cart->add_to_cart($product_id, 1);
+
+		ob_start();
+
+		woocommerce_mini_cart();
+
+		$mini_cart = ob_get_clean();
+
+		$response = array(
+			'fragments' => $mini_cart
+		);
+
+		wp_send_json($response);
+	}
+
+	function remove_from_mini_cart()
+	{
+
+		$cart_item_key = $_POST['cart_item_key'];
+
+		WC()->cart->remove_cart_item($cart_item_key);
+
+		ob_start();
+
+		woocommerce_mini_cart();
+
+		$mini_cart = ob_get_clean();
+
+		$response = array(
+			'fragments' => $mini_cart
+		);
+
+		wp_send_json($response);
 	}
 }
